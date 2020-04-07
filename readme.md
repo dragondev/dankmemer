@@ -1,25 +1,26 @@
 # DankMemer
-An API wrapper for Dank Memer API.
+An API wrapper for Dank Memer API with some modifications.
 [orginal repo](https://github.com/INEX07/dankmemer.js)
-[![NPM](https://nodei.co/npm/dankmemer.js.png)](https://nodei.co/npm/dankmemer.js/)
+[![NPM](https://nodei.co/npm/@shadow/dankmemer.png)](https://nodei.co/npm/@shadow/dankmemer/)
 
 # Installing
 `npm i @shadow/dankmemer`
 
 # Updates
 - Fixed some bugs
+- Moved to centra 
 
 # Usage
 ```js
-const DankMemer = require("@shadow/dankmemer");
-const memer = new DankMemer("Your API Token Goes Here");
+const DankMemer = require('@shadow/dankmemer');
+const memer = new DankMemer('Your API Token Goes Here');
 ```
 
 # Example
 ```js
-const DankMemer = require("@shadow/dankmemer");
-const memer = new DankMemer("Dank Memer Api Key");
-const Discord = require("discord.js");
+const DankMemer = require('@shadow/dankmemer');
+const memer = new DankMemer('Your API Token Goes Here');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on("ready", () => {
@@ -38,7 +39,7 @@ client.on("message", async(message) => {
     }
 })
 
-client.login("Discord Bot Token");
+client.login('Discord Bot Token');
 ```
 
 # Methods
