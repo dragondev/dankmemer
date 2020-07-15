@@ -1,0 +1,12 @@
+{
+  "extends": "@aero",
+  "rules": {
+    "max-len": off,
+    "no-shadow": off,
+    "id-length": off,
+    "camelcase": off,
+    "prefer-destructuring": off,
+    "consistent-return": off,
+    "no-useless-escape": off
+  }
+}
