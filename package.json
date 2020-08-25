@@ -1,15 +1,17 @@
 {
     "name": "@shadow/dankmemer",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "An API wrapper for the Dank Memer API ",
     "main": "index.js",
     "scripts": {
         "lint": "eslint . --fix"
     },
-    "author": ["dragonblitz10", "INEX07"],
+    "author": [
+        "dragonblitz10",
+        "INEX07"
+    ],
     "dependencies": {
-        "@aero/centra": "^1.0.0",
-        "discord.js": "^12.2.0"
+        "@aero/centra": "^1.0.0"
     },
     "devDependencies": {
         "eslint": "^6.8.0"
