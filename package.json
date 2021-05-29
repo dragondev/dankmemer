@@ -11,7 +11,7 @@
     "INEX07"
   ],
   "dependencies": {
-    "centra": "^1.0.1"
+    "centra": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0"
