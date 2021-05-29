@@ -1,67 +1,78 @@
 # DankMemer
+
 An API wrapper for Dank Memer API with some modifications.
 [orginal repo](https://github.com/INEX07/dankmemer.js)
 [![NPM](https://nodei.co/npm/@shadow/dankmemer.png)](https://nodei.co/npm/@shadow/dankmemer/)
 
 # Installing
+
 `npm i @shadow/dankmemer`
 
-# Updates
+# Changes
+
 - Fixed some bugs
-- Moved to centra 
+- Moved to centra
 
 # Usage
+
 ```js
-const DankMemer = require('@shadow/dankmemer');
-const memer = new DankMemer('Your API Token Goes Here');
+const DankMemer = require("@shadow/dankmemer");
+const memer = new DankMemer("Your API Token Goes Here");
 ```
 
 # Example
+
 ```js
-const DankMemer = require('@shadow/dankmemer');
-const memer = new DankMemer('Your API Token Goes Here');
-const Discord = require('discord.js');
+const DankMemer = require("@shadow/dankmemer");
+const memer = new DankMemer("Your API Token Goes Here");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
-    console.log(`Memer is online!`);
+  console.log(`Memer is online!`);
 });
 
-client.on("message", async(message) => {
-    if (!message.guild || message.author.bot) return;
-    if (message.content === "spank") {
-        let userone = message.author.displayAvatarURL;
-        let usertwo = client.user.displayAvatarURL;
-        let image = await memer.spank(userone, usertwo);
+client.on("message", async (message) => {
+  if (!message.guild || message.author.bot) return;
+  if (message.content === "spank") {
+    let userone = message.author.displayAvatarURL;
+    let usertwo = client.user.displayAvatarURL;
+    let image = await memer.spank(userone, usertwo);
 
-        const attachment = new Discord.Attachment(image, "spank.png")
-        return message.channel.send(attachment);
-    }
-})
+    const attachment = new Discord.Attachment(image, "spank.png");
+    return message.channel.send(attachment);
+  }
+});
 
-client.login('Discord Bot Token');
+client.login("Discord Bot Token");
 ```
 
 # Methods
+
 - async-await
+
 ```js
 async function spank(avatar1, avatar2) {
-    let img = await memer.spank(avatar1, avatar2);
-    message.channel.send({ file: img });
+  let img = await memer.spank(avatar1, avatar2);
+  message.channel.send({ file: img });
 }
 spank();
 ```
 
 - .then
+
 ```js
-memer.spank(avatar1, avatar2).then(img => {
-    message.channel.send({ file: img });
-})
+memer.spank(avatar1, avatar2).then((img) => {
+  message.channel.send({ file: img });
+});
 ```
+
 # Getting API Key
+
 Go to [dankmemer.services/dashboard](https://dankmemer.services/dashboard) and request for API key.
 
 # Functions
+
 - abandon
 - aborted
 - affect
@@ -159,6 +170,7 @@ Go to [dankmemer.services/dashboard](https://dankmemer.services/dashboard) and r
 - youtube
 
 # RateLimits [ Source: Dank Memer API ]
+
 Rate Limits
 Each endpoint has it's own ratelimit, which you can find in it's documentation. Additionally, the API has a global ratelimit of 300 requests per minute.
 
@@ -166,6 +178,7 @@ The ratelimits for the endpoint are defined with X-RateLimit-:key, while the glo
 When the global ratelimit is hit, the body will contain an additional JSON key "global" which will be set to true.
 
 # Ratelimit Headers:
+
 - X-RateLimit-Limit: Maximum usage allowed per timeframe
 - X-Ratelimit-Remaining: Remaining requests that can be made during the timeframe
 - X-RateLimit-Reset: Timestamp indicating when the ratelimit will reset in milliseconds.
@@ -176,7 +189,9 @@ When the global ratelimit is hit, the body will contain an additional JSON key "
 - Retry-After: Time to wait in milliseconds until another request can be made. Only exposed if ratelimit is reached.
 
 # API Docs
+
 **[Click Here](https://dankmemer.services/documentation)**
 
 # Orginal Owner's GitHub
+
 **[Click Here](https://github.com/INEX07)**

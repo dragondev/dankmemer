@@ -1,19 +1,19 @@
 {
-    "name": "@shadow/dankmemer",
-    "version": "1.2.0",
-    "description": "An API wrapper for the Dank Memer API ",
-    "main": "index.js",
-    "scripts": {
-        "lint": "eslint . --fix"
-    },
-    "author": [
-        "dragonblitz10",
-        "INEX07"
-    ],
-    "dependencies": {
-        "@aero/centra": "^1.0.0"
-    },
-    "devDependencies": {
-        "eslint": "^6.8.0"
-    }
+  "name": "@shadow/dankmemer",
+  "version": "1.2.1",
+  "description": "An API wrapper for the Dank Memer API ",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
+  "author": [
+    "dragonblitz10",
+    "INEX07"
+  ],
+  "dependencies": {
+    "centra": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
 }
